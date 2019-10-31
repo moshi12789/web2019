@@ -1,0 +1,399 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>臺灣快樂自由行</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
+<script type="text/javascript" src="jquery-1.6.4.min.js"></script>
+<script>
+$(document).ready(function() {
+	$(".bg,.icon_bg,.icon,.text,.line").fadeToggle(3000);
+	$(".top_t").slideToggle(3000);    
+	
+	$(document).scroll(function(){
+	var scrollVal = $(this).scrollLeft();
+	if (scrollVal >0 && scrollVal <= 1620){
+	$(".bg,.icon_bg").css("background-color","#9C1616");
+	now = "1";
+	}
+	else if (scrollVal >1620 && scrollVal <= 3540){
+	$(".bg,.icon_bg").css("background-color","#003A9D");
+	now = "2";
+	}
+	else if (scrollVal >3540 && scrollVal <= 5460){
+	$(".bg,.icon_bg").css("background-color","#005600");
+	now = "3";
+	}
+	else if (scrollVal >5460 && scrollVal <= 7380){
+	$(".bg,.icon_bg").css("background-color","#C24514");
+	now = "4";
+	}
+	else if (scrollVal >7380){
+	$(".bg,.icon_bg").css("background-color","#7E1679");
+	now = "5";
+	}
+	});
+	
+	var now = "1" ;
+	
+	$("#menu li").click(function(e){
+	
+	if (now!=e.currentTarget.id){
+	$(".bg,.icon_bg,.icon,.text,.line").fadeOut(500);
+	$(".top_t").slideUp(1000);
+	}
+	
+	now=e.currentTarget.id ;
+	var main_id = "p"+ now;
+	$("html,body").animate({"scrollLeft":$("#" + main_id).offset().left},2000);	
+	$(".bg,.icon_bg,.line").fadeIn(1000);
+	$(".icon,.text").delay(1500).fadeIn(500);	
+	$(".top_t").slideDown(1500);
+	});
+});
+
+
+
+
+</script>
+
+</head>
+
+<body>
+<div class="all">
+  <div class="icon">
+    <div class="icon_bg"></div>
+    <div class="dot"><img src="images/dot.png" width="941" height="1561" /></div>
+    <div class="mor1"><img src="images/mor1.png" width="500" height="501" /></div>
+    <div class="mor2"><img src="images/mor2.png" width="601" height="627" /></div>
+    <div class="mor3"><img src="images/mor3.png" width="501" height="523" /></div>
+    <ul id="menu">
+    <div class="home"><a href="index.html"><img src="images/home.png" width="40" height="40" /></a></div>
+      <li id="1">
+        <div class="d" id="d1"></div>
+        <div class="t">行遍臺灣</div>
+        <div class="f"></div>
+      </li>
+      <li id="2">
+        <div class="d" id="d2"></div>
+        <div class="t">名山勝水</div>
+        <div class="f"></div>
+      </li>
+      <li id="3">
+        <div class="d" id="d3"></div>
+        <div class="t">特色文化</div>
+        <div class="f"></div>
+      </li>
+      <li id="4">
+        <div class="d" id="d4"></div>
+        <div class="t">名產小吃</div>
+        <div class="f"></div>
+      </li>
+      <li id="5">
+        <div class="d" id="d5"></div>
+        <div class="t">聯絡我們</div>
+        <div class="f"></div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-------------------------------------------------------------------------->
+<div class="container">
+  <div class="main" id="p1">
+    <div class="bg"></div>
+    <div class="sbg"></div>
+    <div class="line" id="line1"></div>
+    <div class="cir">
+      <div class="text">
+      <p>臺灣，這座美麗的島嶼被譽為「福爾摩沙」，其意為美麗之島。豐富的人文景觀、生態環境、人文風采、現代藝術、美食文化集於一地，讓臺灣成為國際上許多觀光客會選擇的景點，也確實讓許多遊客回味無窮，難忘不已。</p>
+<p>臺灣擁有許多文化特色，讓許多國際的觀光客感到特別趣味新奇，在因此有了許多的商機，讓台灣越來越進步。</p>
+<p>為促進本土產業的永續發展，許多縣市有著文化館，像是雲林的布袋戲館、臺北的十三行博物館、宜蘭的傳統藝術中心及蘭陽博物館，都記錄著臺灣歷史。</p>
+
+      </div>
+    </div>
+    <div class="top_t" id="t1"></div>
+    <div class="img1">
+      <div><img src="images/11.jpg" width="500" height="500" /></div>
+      <div><img src="images/12.jpg" width="500" height="500" /></div>
+      <span></span>
+    </div>
+    <div class="img2" id="img21"></div>
+    <div class="img3" id="img31"></div>
+    <div class="logo">
+      <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="550" height="400">
+        <param name="movie" value="images/logo1.swf" />
+        <param name="quality" value="high" />
+        <param name="wmode" value="transparent" />
+        <param name="swfversion" value="15.0.0.0" />
+        <!-- 此 param 標籤會提示使用 Flash Player 6.0 r65 和更新版本的使用者下載最新版本的 Flash Player。如果您不想讓使用者看到這項提示，請將其刪除。 -->
+        <param name="expressinstall" value="Scripts/expressInstall.swf" />
+        <param name="SCALE" value="exactfit" />
+        <!-- 下一個物件標籤僅供非 IE 瀏覽器使用。因此，請使用 IECC 將其自 IE 隱藏。 -->
+        <!--[if !IE]>-->
+        <object type="application/x-shockwave-flash" data="images/logo1.swf" width="550" height="400">
+          <!--<![endif]-->
+          <param name="quality" value="high" />
+          <param name="wmode" value="transparent" />
+          <param name="swfversion" value="15.0.0.0" />
+          <param name="expressinstall" value="Scripts/expressInstall.swf" />
+          <param name="SCALE" value="exactfit" />
+          <!-- 瀏覽器會為使用 Flash Player 6.0 和更早版本的使用者顯示下列替代內容。 -->
+          <div>
+            <h4>這個頁面上的內容需要較新版本的 Adobe Flash Player。</h4>
+            <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="取得 Adobe Flash Player" /></a></p>
+          </div>
+          <!--[if !IE]>-->
+        </object>
+        <!--<![endif]-->
+      </object>
+    </div>
+  </div>
+  
+  
+  <!--------------------------------------------------------------------------------------------------------------->
+  
+    <div class="main" id="p2">
+    <div class="bg"></div>
+    <div class="sbg"></div>
+    <div class="line" id="line2"></div>
+    <div class="cir">
+      <div class="text">
+      <p>臺灣擁有許多不同的地理環境，像是高山、盆地、平原等地形，也因此造就了許多美麗的景色。</p>
+<p>一、日月潭：日月潭位於南投，可以藉由搭乘纜車觀賞美麗的風景，也是許多國際觀光客的首選。</p>
+<p>二、阿里山：阿里山位於嘉義，許多攝影師會在阿里山露營，拍攝美麗的日出雲海，阿里山也有提供小火車讓遊客可以藉由搭乘小火車欣賞阿里山風光。</p>
+<p>三、玉山：玉山位於台灣的西部，是臺灣最高的山脈，也是許多遊客爬山的首選。</p>
+<p>臺灣許多的景色非常值得欣賞，如果你去過一回，一定也會永生難忘！</p>
+      </div>
+    </div>
+    <div class="top_t" id="t2"></div>
+    <div class="img1">
+      <div><img src="images/21.jpg" width="500" height="500" /></div>
+      <div><img src="images/22.jpg" width="500" height="500" /></div>
+      <span></span>
+    </div>
+    <div class="img2" id="img22"></div>
+    <div class="img3" id="img32"></div>
+    <div class="logo">
+      <object id="FlashID2" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="550" height="400">
+        <param name="movie" value="images/logo2.swf" />
+        <param name="quality" value="high" />
+        <param name="wmode" value="transparent" />
+        <param name="swfversion" value="15.0.0.0" />
+        <!-- 此 param 標籤會提示使用 Flash Player 6.0 r65 和更新版本的使用者下載最新版本的 Flash Player。如果您不想讓使用者看到這項提示，請將其刪除。 -->
+        <param name="expressinstall" value="Scripts/expressInstall.swf" />
+        <param name="SCALE" value="exactfit" />
+        <!-- 下一個物件標籤僅供非 IE 瀏覽器使用。因此，請使用 IECC 將其自 IE 隱藏。 -->
+        <!--[if !IE]>-->
+        <object type="application/x-shockwave-flash" data="images/logo2.swf" width="550" height="400">
+          <!--<![endif]-->
+          <param name="quality" value="high" />
+          <param name="wmode" value="transparent" />
+          <param name="swfversion" value="15.0.0.0" />
+          <param name="expressinstall" value="Scripts/expressInstall.swf" />
+          <param name="SCALE" value="exactfit" />
+          <!-- 瀏覽器會為使用 Flash Player 6.0 和更早版本的使用者顯示下列替代內容。 -->
+          <div>
+            <h4>這個頁面上的內容需要較新版本的 Adobe Flash Player。</h4>
+            <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="取得 Adobe Flash Player" /></a></p>
+          </div>
+          <!--[if !IE]>-->
+        </object>
+        <!--<![endif]-->
+      </object>
+    </div>
+  </div>
+  
+    <!--------------------------------------------------------------------------------------------------------------->
+  
+    <div class="main" id="p3">
+    <div class="bg"></div>
+    <div class="sbg"></div>
+    <div class="line" id="line3"></div>
+    <div class="cir">
+      <div class="text">
+      <p>臺灣有著許多特色文化，讓人覺得新奇有趣。</p><p>一、許多人有著不同的信仰，因此臺灣有著許多不同的教堂、廟宇，像是天主教、基督教、佛教等等。</p><p>二、中國文化流傳下來許多特色，例如國樂，許多學校辦理國樂社團，讓國樂永續流傳。</p><p>三、布袋戲也是中國文化流傳下來的，雖然觀眾年齡層逐漸老化，但為了不讓布袋戲消失，許多縣市都會有相關的文化館。</p><p>人文風采很多，但是保存卻不易，各縣市的文化產覽館完整紀錄許多文化，也不定時舉辦活動，一定會讓你充滿期待！</p></div>
+    </div>
+    <div class="top_t" id="t3"></div>
+    <div class="img1">
+      <div><img src="images/31.jpg" width="500" height="500" /></div>
+      <div><img src="images/32.jpg" width="500" height="500" /></div>
+      <span></span>
+    </div>
+    <div class="img2" id="img23"></div>
+    <div class="img3" id="img33"></div>
+    <div class="logo">
+      <object id="FlashID3" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="550" height="400">
+        <param name="movie" value="images/logo3.swf" />
+        <param name="quality" value="high" />
+        <param name="wmode" value="transparent" />
+        <param name="swfversion" value="15.0.0.0" />
+        <!-- 此 param 標籤會提示使用 Flash Player 6.0 r65 和更新版本的使用者下載最新版本的 Flash Player。如果您不想讓使用者看到這項提示，請將其刪除。 -->
+        <param name="expressinstall" value="Scripts/expressInstall.swf" />
+        <param name="SCALE" value="exactfit" />
+        <!-- 下一個物件標籤僅供非 IE 瀏覽器使用。因此，請使用 IECC 將其自 IE 隱藏。 -->
+        <!--[if !IE]>-->
+        <object type="application/x-shockwave-flash" data="images/logo3.swf" width="550" height="400">
+          <!--<![endif]-->
+          <param name="quality" value="high" />
+          <param name="wmode" value="transparent" />
+          <param name="swfversion" value="15.0.0.0" />
+          <param name="expressinstall" value="Scripts/expressInstall.swf" />
+          <param name="SCALE" value="exactfit" />
+          <!-- 瀏覽器會為使用 Flash Player 6.0 和更早版本的使用者顯示下列替代內容。 -->
+          <div>
+            <h4>這個頁面上的內容需要較新版本的 Adobe Flash Player。</h4>
+            <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="取得 Adobe Flash Player" /></a></p>
+          </div>
+          <!--[if !IE]>-->
+        </object>
+        <!--<![endif]-->
+      </object>
+    </div>
+  </div>
+
+
+  <!--------------------------------------------------------------------------------------------------------------->
+  
+    <div class="main" id="p4">
+    <div class="bg"></div>
+    <div class="sbg"></div>
+    <div class="line" id="line4"></div>
+    <div class="cir">
+      <div class="text">
+     <p>除了特色文化及歷史，臺灣的名產小吃也是聞名國際！</p>
+<p>一、臭豆腐是臺灣的美食小吃之一，在夜市常常出現，味道很臭，但是吃起來卻是美味的。</p>
+<p>二、肉圓也是許多人喜歡的美味，尤其彰化肉圓最為有名，讓許多觀光客到當地探索！</p>
+<p>除了各地都有的美食之外，當然也有特定美食只在特定地點出現，像是臺南的棺材板、宜蘭的鴨賞、嘉義的雞肉飯等等。</p>
+<p>每個地方都有許多不同於別地的特色，美食也是，讓我們一起去探索更多好吃的名產小吃！</p>
+      </div>
+    </div>
+    <div class="top_t" id="t4"></div>
+    <div class="img1">
+      <div><img src="images/41.jpg" width="500" height="500" /></div>
+      <div><img src="images/42.jpg" width="500" height="500" /></div>
+      <span></span>
+    </div>
+    <div class="img2" id="img24"></div>
+    <div class="img3" id="img34"></div>
+    <div class="logo">
+      <object id="FlashID4" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="550" height="400">
+        <param name="movie" value="images/logo4.swf" />
+        <param name="quality" value="high" />
+        <param name="wmode" value="transparent" />
+        <param name="swfversion" value="15.0.0.0" />
+        <!-- 此 param 標籤會提示使用 Flash Player 6.0 r65 和更新版本的使用者下載最新版本的 Flash Player。如果您不想讓使用者看到這項提示，請將其刪除。 -->
+        <param name="expressinstall" value="Scripts/expressInstall.swf" />
+        <param name="SCALE" value="exactfit" />
+        <!-- 下一個物件標籤僅供非 IE 瀏覽器使用。因此，請使用 IECC 將其自 IE 隱藏。 -->
+        <!--[if !IE]>-->
+        <object type="application/x-shockwave-flash" data="images/logo4.swf" width="550" height="400">
+          <!--<![endif]-->
+          <param name="quality" value="high" />
+          <param name="wmode" value="transparent" />
+          <param name="swfversion" value="15.0.0.0" />
+          <param name="expressinstall" value="Scripts/expressInstall.swf" />
+          <param name="SCALE" value="exactfit" />
+          <!-- 瀏覽器會為使用 Flash Player 6.0 和更早版本的使用者顯示下列替代內容。 -->
+          <div>
+            <h4>這個頁面上的內容需要較新版本的 Adobe Flash Player。</h4>
+            <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="取得 Adobe Flash Player" /></a></p>
+          </div>
+          <!--[if !IE]>-->
+        </object>
+        <!--<![endif]-->
+      </object>
+    </div>
+  </div>
+
+
+  <!--------------------------------------------------------------------------------------------------------------->
+  
+    <div class="main" id="p5">
+    <div class="bg"></div>
+    <div class="sbg"></div>
+    <div class="line" id="line5"></div>
+    <div class="cir">
+      <div class="text">
+            <form action="mailto:twody@ms.ltcvs.ilc.edu.tw?subject=我要留言" method="post" enctype="text/plain" name="form1" id="form1">
+              <p>
+                <label for="name">1. 姓名：</label>
+                <input name="name" type="text" id="name" size="12" />
+              </p>
+              <p>
+                2. 性別：
+                  <label>
+                  <input name="sex" type="radio" id="sex_0" value="男" checked="checked" />
+                  男</label>
+                  <label>
+                  <input type="radio" name="sex" value="女" id="sex_1" />
+                  女</label>
+              </p>
+           
+              <p>
+                <label for="mail">3. 信箱：</label>
+                <input name="mail" type="text" id="mail" size="30" />
+              </p>
+              <p>
+                <label for="talk">4. 意見交流：<br />
+                　</label>
+                 <textarea name="talk" cols="30" rows="6" id="talk"></textarea>
+              </p>
+              <p>
+                <input type="submit" name="submit" id="submit" value="送出" />
+                <input type="reset" name="reset" id="reset" value="重設" />
+                <br />
+              </p>
+            </form>
+      </div>
+    </div>
+    <div class="top_t" id="t5"></div>
+    <div class="img1">
+      <div><img src="images/51.jpg" width="500" height="500" /></div>
+      <div><img src="images/52.jpg" width="500" height="500" /></div>
+      <span></span>
+    </div>
+    <div class="img2" id="img25"></div>
+    <div class="img3" id="img35"></div>
+    <div class="logo">
+      <object id="FlashID5" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="550" height="400">
+        <param name="movie" value="images/logo5.swf" />
+        <param name="quality" value="high" />
+        <param name="wmode" value="transparent" />
+        <param name="swfversion" value="15.0.0.0" />
+        <!-- 此 param 標籤會提示使用 Flash Player 6.0 r65 和更新版本的使用者下載最新版本的 Flash Player。如果您不想讓使用者看到這項提示，請將其刪除。 -->
+        <param name="expressinstall" value="Scripts/expressInstall.swf" />
+        <param name="SCALE" value="exactfit" />
+        <!-- 下一個物件標籤僅供非 IE 瀏覽器使用。因此，請使用 IECC 將其自 IE 隱藏。 -->
+        <!--[if !IE]>-->
+        <object type="application/x-shockwave-flash" data="images/logo5.swf" width="550" height="400">
+          <!--<![endif]-->
+          <param name="quality" value="high" />
+          <param name="wmode" value="transparent" />
+          <param name="swfversion" value="15.0.0.0" />
+          <param name="expressinstall" value="Scripts/expressInstall.swf" />
+          <param name="SCALE" value="exactfit" />
+          <!-- 瀏覽器會為使用 Flash Player 6.0 和更早版本的使用者顯示下列替代內容。 -->
+          <div>
+            <h4>這個頁面上的內容需要較新版本的 Adobe Flash Player。</h4>
+            <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="取得 Adobe Flash Player" /></a></p>
+          </div>
+          <!--[if !IE]>-->
+        </object>
+        <!--<![endif]-->
+      </object>
+    </div>
+  </div>
+
+
+</div>
+<script type="text/javascript">
+swfobject.registerObject("FlashID");
+swfobject.registerObject("FlashID2");
+swfobject.registerObject("FlashID3");
+swfobject.registerObject("FlashID4");
+swfobject.registerObject("FlashID5");
+</script>
+</body>
+</html>

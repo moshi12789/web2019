@@ -1,0 +1,101 @@
+@charset "utf-8";
+*{
+	margin:0px;}
+
+.bg {
+	background-color: #9C1616;
+	height: 976px;
+	width: 1920px;
+	opacity:0.3;
+	animation:bg 25s linear infinite 2s;
+}
+@keyframes bg{
+	0%{ background:#9C1616;}
+	20%{ background:#9C1616;}
+	22%{ background:#003A9D;}
+	40%{ background:#003A9D;}
+	42%{ background:#005600;}
+	60%{ background:#005600;}
+	62%{ background:#C24514;}
+	80%{ background:#C24514;}
+	82%{ background:#7E1679;}
+	95%{ background:#7E1679;}
+	100%{ background:#9C1616;}
+}
+
+.main{
+	margin: auto;
+	height: 600px;
+	width: 1250px;
+	position: absolute;
+	left: 0px;
+	top: -100px;
+	right: 0px;
+	bottom: 0px;
+	border-bottom:5px #000 solid;
+	overflow:hidden;
+}
+
+.ban{
+	position:absolute;
+	left:600px;
+	top:140px;
+}
+
+.ban div{
+	position:absolute;
+	top:0px;
+	left:0px;
+	opacity:0;
+	animation:ban 25s linear 2.5s;
+}
+@keyframes ban{
+4%{ opacity:1;}
+20%{ opacity:1;}
+24%{ opacity:0;}
+}
+
+.ban div:nth-child(1){ animation-delay:0s;}
+.ban div:nth-child(2){ animation-delay:5s;}
+.ban div:nth-child(3){ animation-delay:10s;}
+.ban div:nth-child(4){ animation-delay:15s;}
+.ban div:nth-child(5){ animation-delay:20s;}
+
+.icon{
+	width: 1250px;
+	height: 100px;
+	top:780px;
+	margin: 0 auto;
+	position:absolute;
+	text-align: right;
+	left: 0px;
+	right: 0px;
+
+}
+
+a{
+	font-family: Arial;
+	font-size: 32px;
+	font-weight: bold;
+	color: #000;
+	text-decoration: none;
+	transition:all 0.5s ease;
+}
+
+a:hover{
+	font-size: 35px;
+	color: #FFF;
+	text-shadow:0px 0px 5px #000;
+
+	
+}
+
+.logo{
+	animation:logo 2s ease forwards;
+	position:absolute;
+	bottom:-500px;
+	left:0px;
+}
+@keyframes logo{
+	to{ bottom:-90px;}
+}

@@ -1,0 +1,353 @@
+@charset "utf-8";
+*{
+	margin:0px;
+	padding:0px;
+}
+
+html,body{
+	height:100%;
+}
+
+
+.all {
+	height: 1000px;
+	width: 400px;
+	overflow: hidden;
+	position: fixed;
+	z-index: 999;
+	right: 0px;
+}
+
+.icon{
+	width:520px;
+	height:1100px;
+	position:relative;
+	top:-20px;
+	left:60px;
+	overflow:hidden;
+	transform:rotate(7deg);
+	box-shadow:0px 0px 10px 5px #FFF;
+	display:none;
+}
+.icon_bg{
+	width:520px;
+	height:1100px;
+	position:absolute;
+	background:#9C1616;
+	display:none;
+}
+.dot{
+	position:absolute;
+	top:-180px;
+	right:-130px;
+}
+.mor1{
+	position:absolute;
+	top:-230px;
+	right:-20px;
+	animation:mor1 15s linear infinite;
+}
+.mor2{
+	position:absolute;
+	top:230px;
+	right:235px;
+	animation:mor2 30s linear infinite;
+}
+.mor3{
+	position:absolute;
+	top:695px;
+	right:-140px;
+	animation:mor1 20s linear infinite;
+}
+
+@keyframes mor1{
+	from{ transform:rotate(0deg);}
+	to{ transform:rotate(360deg);}
+}
+@keyframes mor2{
+	from{ transform:rotate(0deg);}
+	to{ transform:rotate(-360deg);}
+}
+
+#menu{
+	width: 520px;
+	height: 1100px;
+	position: absolute;
+	top: 65px;
+	overflow: hidden;
+	font-family: "華康中圓體", "微軟正黑體";
+	font-size: 23pt;
+	line-height: 22pt;
+	color: #FFF;
+	list-style: none;
+	text-shadow: 0px 0px 8px #000;
+}
+
+#menu li{
+	width:180px;
+	height:160px;
+	position:relative;
+	left:-150px;
+	top:80px;
+	cursor:pointer;
+	transition:all 0.5s ease;
+}
+
+#menu li:hover{
+	left:-5px;
+}
+
+.d{
+	width:140px;
+	height:110px;
+	border:5px solid #FFF;
+	border-radius:0px 10px 10px 0px;
+	box-shadow:0px 0px 5px #FFF;
+	float:left;	
+}
+
+#d1{ background:url(images/bg1.jpg); background-size:cover;}
+#d2{ background:url(images/bg2.jpg); background-size:cover;}
+#d3{ background:url(images/bg3.jpg); background-size:cover;}
+#d4{ background:url(images/bg4.jpg); background-size:cover;}
+#d5{ background:url(images/bg5.jpg); background-size:cover;}
+
+
+.t{
+	width:20px;
+	float:left;
+	padding-left:5px;
+}
+.f{
+	width:50px;
+	height:50px;
+	background:url(images/land.gif) no-repeat;
+	background-size:70%;
+	position:absolute;
+	left:190px;
+	top:-35px;
+}
+
+
+.container{
+	width:9600px;
+	height:100%;
+	overflow:hidden;
+}
+.main{
+	width:1920px;
+	height:100%;
+	overflow:hidden;
+	float:left;
+	position:relative;
+}
+.bg{
+	width:1920px;
+	height:100%;
+	background:#9C1616;
+	opacity:0.3;
+	position:absolute;
+	display:none;
+}
+
+.sbg{
+	width:1920px;
+	height:960px;
+	background:url(images/sbg.png) no-repeat;
+	position:absolute;
+}
+
+.line{
+	width:1920px;
+	height:960px;
+	position:absolute;
+	display:none;
+}
+#line1{	background:url(images/line1.png) no-repeat;}
+#line2{	background:url(images/line2.png) no-repeat;}
+#line3{	background:url(images/line3.png) no-repeat;}
+#line4{	background:url(images/line4.png) no-repeat;}
+#line5{	background:url(images/line5.png) no-repeat;}
+
+.cir{
+	width:780px;
+	height:780px;
+	background:#FFF;
+	border-radius:50%;
+	position:absolute;
+	left:812px;
+	top:124px;
+}
+
+.text{
+	width: 600px;
+	height: 600px;
+	position: relative;
+	top: 130px;
+	left: 80px;
+	font-family: "華康細圓體", "微軟正黑體", Arial;
+	font-size: 18pt;
+	line-height: 32pt;
+	font-weight: bold;
+	color: #000;
+	text-align: justify;
+	text-indent: 40pt;
+	display:none;
+}
+
+.top_t{
+	width:495px;
+	height:184px;
+	position:absolute;
+	top:-5px;
+	left:955px;
+	display:none;
+}
+#t1{ background:url(images/t1.png);}
+#t2{ background:url(images/t2.png);}
+#t3{ background:url(images/t3.png);}
+#t4{ background:url(images/t4.png);}
+#t5{ background:url(images/t5.png);}
+
+.img1{
+	width:380px;
+	height:380px;
+	overflow:hidden;
+	position:absolute;
+	left:148px;
+	top:535px;
+	border-radius:50%;
+	border:7px solid #FFF;
+	z-index:3;
+}
+.img1 div{
+	position:absolute;
+	top:0px;
+	left:0px;
+	opacity:0;
+	animation:round 10s linear infinite;
+}
+
+@keyframes round{
+	10%{ opacity:1; top:0px; left:0px;}
+	50%{ opacity:1; top:-100px; left:-100px;}
+	60%{ opacity:0; top:-100px; left:-100px;}
+}
+
+.img1 div:nth-child(1){ animation-delay:0s;}
+.img1 div:nth-child(2){ animation-delay:5s;}
+
+.img1:hover div{
+	animation-play-state:paused;
+}
+
+span{
+	width:380px;
+	height:380px;
+	position:absolute;
+	border-radius:50%;
+	transition:all 0.5s linear;}
+
+.img1:hover span{
+	box-shadow:inset 0 0 0 300px rgba(255,255,255,0.5);
+}
+
+.img2{
+	width:240px;
+	height:240px;
+	overflow:hidden;
+	position:absolute;
+	left:130px;
+	top:270px;
+	border-radius:50%;
+	border:5px solid #FFF;
+	z-index:3;
+	transition:all 0.5s ease;
+}
+.img2:hover , .img3:hover{
+	box-shadow:inset 0 0 0 200px rgba(255,255,255,0.5);
+	transform:rotateY(180deg);
+}
+
+#img21{ background:url(images/13.jpg); background-size:cover;}
+#img22{ background:url(images/23.jpg); background-size:cover;}
+#img23{ background:url(images/33.jpg); background-size:cover;}
+#img24{ background:url(images/43.jpg); background-size:cover;}
+#img25{ background:url(images/53.jpg); background-size:cover;}
+
+
+.img3{
+	width:210px;
+	height:210px;
+	overflow:hidden;
+	position:absolute;
+	left:563px;
+	top:563px;
+	border-radius:50%;
+	border:5px solid #FFF;
+	z-index:3;
+	transition:all 0.5s ease;
+}
+
+#img31{ background:url(images/14.jpg); background-size:cover;}
+#img32{ background:url(images/24.jpg); background-size:cover;}
+#img33{ background:url(images/34.jpg); background-size:cover;}
+#img34{ background:url(images/44.jpg); background-size:cover;}
+#img35{ background:url(images/54.jpg); background-size:cover;}
+
+
+.logo{
+	position:absolute;
+	left:360px;
+	top:30px;
+	transform:rotate(-7deg);
+}
+
+
+
+
+
+form{
+	width: 500px;
+	height: 500px;
+	position: relative;
+	margin: 0 auto;
+	
+	line-height: 50pt;
+	font-family: "華康細圓體", "微軟正黑體", "Arial";
+	font-size: 20pt;
+	font-weight: normal;
+}
+
+input {
+	width:300px;
+
+	font-family: "華康細圓體", "微軟正黑體", "Arial";
+	font-size: 20pt;
+}
+/*男女*/
+#sex_0,#sex_1{
+	width: 20px;
+	height: 20px;
+}
+/*意見交流*/
+#talk{
+	width:400px;
+	position:relative;
+	left:55px;
+
+	font-family: "華康細圓體", "微軟正黑體", "Arial";
+	font-size: 20pt;
+}
+
+#submit,#reset{
+	width: 80px;
+	height: 40px;
+	cursor: pointer;
+	position:relative;
+	left:150px;
+	
+	font-family: "華康細圓體", "微軟正黑體", "Arial";
+	font-size: 20pt;
+	border-radius: 10px;
+}
